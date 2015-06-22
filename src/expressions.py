@@ -325,6 +325,10 @@ class arg_t(assignable_t, replaceable_t):
 
     return
 
+  @property
+  def size(self):
+    return self.where.size
+
   def copy(self, with_definition=False):
     copy = arg_t(self.where.copy(), name=self.name, index=self.index)
     if with_definition:
