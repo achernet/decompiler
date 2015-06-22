@@ -801,6 +801,11 @@ class texpr_t(expr_t):
     expr_t.__init__(self, op1, op2, op3)
     return
 
+  def copy(self, **kwargs):
+    return self.__class__(self.op1.copy(**kwargs),
+                          self.op2.copy(**kwargs),
+                          self.op3.copy(**kwargs))
+
   @property
   def op1(self): return self[0]
 
