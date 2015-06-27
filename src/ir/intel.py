@@ -321,7 +321,7 @@ class ir_intel(ir_base):
       expr = assign_t(op.copy(), neg_t(op))
       yield expr
 
-    elif mnem in ('mov', 'movzx', 'movsxd', 'movsx'):
+    elif mnem in ('mov', 'movzx', 'movsxd', 'movsx', 'movabs'):
 
       dst = self.get_operand_expression(ea, 0)
       op = self.get_operand_expression(ea, 1)
