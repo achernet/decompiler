@@ -449,7 +449,7 @@ class live_range_t(object):
       else:
         for expr in set(current.keys()):
           if expr in self.block_to_uses[next_block] and expr not in self.block_to_defs[next_block]:
-            self.expr_to_stmt[expr] += current[live]
+            self.expr_to_stmt[expr] += current[expr]
     return
 
 class phi_propagator_t(propagator.propagator_t):
