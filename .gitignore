@@ -4,3 +4,6 @@ parsetab.py
 *.i64
 *.idb
 .DS_Store
+.idea/
+src/.ropeproject
+decompiler-EINSTeIN.iml
