@@ -554,7 +554,7 @@ class ssa_back_transformer_t(object):
         self.replace_uses(_expr.definition, var)
     else:
       print 'more than one group'
-      raise 'not implemented'
+      raise NotImplementedError('not implemented')
 
     return
 
